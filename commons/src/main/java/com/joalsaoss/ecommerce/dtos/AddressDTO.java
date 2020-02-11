@@ -13,7 +13,7 @@ import lombok.Data;
 @Data
 public class AddressDTO extends ResponseDTO {
 	Long idAddress;
-	String Adress;
+	String Address;
 	Long idCity;
 	String cityName;
 }

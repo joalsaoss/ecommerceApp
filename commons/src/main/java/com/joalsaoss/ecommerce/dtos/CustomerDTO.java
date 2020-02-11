@@ -12,7 +12,7 @@ import lombok.Data;
 
 @Data
 public class CustomerDTO extends ResponseDTO  {
-	Long idCutomer;
+	Long idCustomer;
 	String firstName;
 	String LastName;
 	String email;

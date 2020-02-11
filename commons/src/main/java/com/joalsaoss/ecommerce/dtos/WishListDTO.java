@@ -13,12 +13,10 @@ import lombok.Data;
 @Data
 public class WishListDTO extends ResponseDTO {
 	Long idWishList;
-	String title;
 	Long IdCustomer;
 	String customerName;
 	Long idProduct;
 	String productName;
-	boolean restricted;
 	String dateAdded;
 	String dateModified;
 	String status;
