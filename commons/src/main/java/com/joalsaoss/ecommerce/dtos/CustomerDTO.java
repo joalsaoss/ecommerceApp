@@ -14,7 +14,7 @@ import lombok.Data;
 public class CustomerDTO extends ResponseDTO  {
 	Long idCustomer;
 	String firstName;
-	String LastName;
+	String lastName;
 	String email;
 	String phone;
 }

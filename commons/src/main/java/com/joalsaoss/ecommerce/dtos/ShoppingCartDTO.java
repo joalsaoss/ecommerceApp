@@ -13,7 +13,7 @@ import lombok.Data;
 @Data
 public class ShoppingCartDTO extends ResponseDTO {
 	Long idShoppingCart;
-	Long IdCustomer;
+	Long idCustomer;
 	String customerName;
 	Long idProduct;
 	String productName;

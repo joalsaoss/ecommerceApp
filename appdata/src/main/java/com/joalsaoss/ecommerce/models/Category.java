@@ -12,6 +12,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -36,10 +38,6 @@ public class Category implements Serializable{
     private Long idCategory;
 	
 	@Basic(optional = false)
-    @Column(name = "IDMAINCATEGORY")
-    private Long idMainCategory;
-	
-	@Basic(optional = false)
     @Column(name = "CATEGORYNAME")
     private String categoryName;
 	
@@ -56,5 +54,9 @@ public class Category implements Serializable{
 	@Basic(optional = false)
     @Column(name = "STATUS")
     private int status;
+	
+	@JoinColumn(name = "IDCATEGORY", referencedColumnName = "IDCATEGORY")
+    @ManyToOne(optional = false)
+    private Category idMainCategory;
 
 }

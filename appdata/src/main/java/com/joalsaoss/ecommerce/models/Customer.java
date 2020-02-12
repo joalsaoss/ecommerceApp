@@ -37,7 +37,7 @@ public class Customer implements Serializable {
 	
 	@Basic(optional = false)
     @Column(name = "LASTNAME")
-	private String LastName;
+	private String lastName;
 	
 	@Basic(optional = false)
     @Column(name = "EMAIL")
