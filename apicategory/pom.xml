@@ -10,10 +10,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.joalsaoss.ecommerce</groupId>
-	<artifactId>apicategory</artifactId>
+	<artifactId>apicustomer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>apicategory</name>
+	<name>apicustomer</name>
 	<description>App for test </description>
 
 	<properties>
