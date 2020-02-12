@@ -16,5 +16,7 @@ public class ProductDTO extends ResponseDTO {
 	String description;
 	String dateAdded;
 	String dateModified;
-	int rating;
+	double price;
+	double weight;
+	Long idCategory;
 }

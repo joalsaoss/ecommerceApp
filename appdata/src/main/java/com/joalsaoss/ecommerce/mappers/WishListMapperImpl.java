@@ -4,6 +4,8 @@ import com.joalsaoss.ecommerce.dtos.WishListDTO;
 import com.joalsaoss.ecommerce.models.Customer;
 import com.joalsaoss.ecommerce.models.Product;
 import com.joalsaoss.ecommerce.models.WishList;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.Generated;
@@ -11,7 +13,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2020-02-12T09:40:29-0500",
+    date = "2020-02-12T15:29:19-0500",
     comments = "version: 1.3.1.Final, compiler: javac, environment: Java 1.8.0_212 (Oracle Corporation)"
 )
 @Component
@@ -27,10 +29,14 @@ public class WishListMapperImpl implements WishListMapper {
 
         wishListDTO.setIdProduct( wishListIdProductIdProduct( wishList ) );
         wishListDTO.setIdWishList( wishList.getIdWishList() );
-        wishListDTO.setDateModified( wishList.getDateModified() );
+        if ( wishList.getDateModified() != null ) {
+            wishListDTO.setDateModified( new SimpleDateFormat( "yyyy-MM-dd" ).format( wishList.getDateModified() ) );
+        }
         wishListDTO.setCustomerName( wishListIdCustomerFirstName( wishList ) );
         wishListDTO.setProductName( wishListIdProductDescription( wishList ) );
-        wishListDTO.setDateAdded( wishList.getDateAdded() );
+        if ( wishList.getDateAdded() != null ) {
+            wishListDTO.setDateAdded( new SimpleDateFormat( "yyyy-MM-dd" ).format( wishList.getDateAdded() ) );
+        }
         wishListDTO.setIdCustomer( wishListIdCustomerIdCustomer( wishList ) );
         wishListDTO.setStatus( wishList.getStatus() );
 
@@ -48,8 +54,22 @@ public class WishListMapperImpl implements WishListMapper {
         wishList1.setIdCustomer( wishListDTOToCustomer( wishList ) );
         wishList1.setIdProduct( wishListDTOToProduct( wishList ) );
         wishList1.setIdWishList( wishList.getIdWishList() );
-        wishList1.setDateModified( wishList.getDateModified() );
-        wishList1.setDateAdded( wishList.getDateAdded() );
+        try {
+            if ( wishList.getDateModified() != null ) {
+                wishList1.setDateModified( new SimpleDateFormat( "yyyy-MM-dd" ).parse( wishList.getDateModified() ) );
+            }
+        }
+        catch ( ParseException e ) {
+            throw new RuntimeException( e );
+        }
+        try {
+            if ( wishList.getDateAdded() != null ) {
+                wishList1.setDateAdded( new SimpleDateFormat( "yyyy-MM-dd" ).parse( wishList.getDateAdded() ) );
+            }
+        }
+        catch ( ParseException e ) {
+            throw new RuntimeException( e );
+        }
         wishList1.setStatus( wishList.getStatus() );
 
         return wishList1;

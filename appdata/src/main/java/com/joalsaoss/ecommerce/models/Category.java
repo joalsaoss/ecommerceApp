@@ -55,8 +55,12 @@ public class Category implements Serializable{
     @Column(name = "STATUS")
     private int status;
 	
-	@JoinColumn(name = "IDCATEGORY", referencedColumnName = "IDCATEGORY")
-    @ManyToOne(optional = false)
+	@Basic(optional = false)
+    @Column(name = "PHOTOURL")
+	String photoUrl;
+	
+	@JoinColumn(name = "IDMAINCATEGORY", referencedColumnName = "IDCATEGORY")
+    @ManyToOne
     private Category idMainCategory;
 
 }

@@ -4,6 +4,7 @@
 package com.joalsaoss.ecommerce.models;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -40,12 +41,12 @@ public class ShoppingCart implements Serializable {
 	@Basic(optional = false)
     @Column(name = "DATEADDED")
     @Temporal(TemporalType.TIMESTAMP)
-	private String dateAdded;
+	private Date dateAdded;
 
 	@Basic(optional = false)
     @Column(name = "DATEMODIFIED")
     @Temporal(TemporalType.TIMESTAMP)
-	private String dateModified;
+	private Date dateModified;
 	
 	@Basic(optional = false)
     @Column(name = "STATUS")

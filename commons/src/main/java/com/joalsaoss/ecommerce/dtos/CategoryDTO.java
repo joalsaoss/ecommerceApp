@@ -18,4 +18,5 @@ public class CategoryDTO extends ResponseDTO {
 	String dateAdded;
 	String dateModified;
 	String status;
+	String photoUrl;
 }

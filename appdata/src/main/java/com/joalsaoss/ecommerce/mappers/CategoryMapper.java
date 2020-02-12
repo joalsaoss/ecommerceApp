@@ -29,6 +29,7 @@ public interface CategoryMapper {
 	@Mapping(source = "category.dateAdded", target = "dateAdded", dateFormat = EcommConstants.FORMAT_DATE_SHORT_WITH_DASH)
 	@Mapping(source = "category.dateModified", target = "dateModified", dateFormat = EcommConstants.FORMAT_DATE_SHORT_WITH_DASH)
 	@Mapping(source = "category.status", target = "status")
+	@Mapping(source = "category.photoUrl", target = "photoUrl")
 	CategoryDTO categoryEntityToDTO(Category category);
 
 	/**
@@ -42,6 +43,7 @@ public interface CategoryMapper {
 	@Mapping(source = "category.dateAdded", target = "dateAdded", dateFormat = EcommConstants.FORMAT_DATE_SHORT_WITH_DASH)
 	@Mapping(source = "category.dateModified", target = "dateModified", dateFormat = EcommConstants.FORMAT_DATE_SHORT_WITH_DASH)
 	@Mapping(source = "category.status", target = "status")
+	@Mapping(source = "category.photoUrl", target = "photoUrl")
 	Category categoryDTOToEntity(CategoryDTO category);
 
 	/**

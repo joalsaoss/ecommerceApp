@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2020-02-12T09:40:29-0500",
+    date = "2020-02-12T15:29:19-0500",
     comments = "version: 1.3.1.Final, compiler: javac, environment: Java 1.8.0_212 (Oracle Corporation)"
 )
 @Component
@@ -25,6 +25,7 @@ public class CategoryMapperImpl implements CategoryMapper {
 
         CategoryDTO categoryDTO = new CategoryDTO();
 
+        categoryDTO.setPhotoUrl( category.getPhotoUrl() );
         categoryDTO.setIdMainCategory( categoryIdMainCategoryIdCategory( category ) );
         if ( category.getDateModified() != null ) {
             categoryDTO.setDateModified( new SimpleDateFormat( "yyyy-MM-dd" ).format( category.getDateModified() ) );
@@ -48,6 +49,7 @@ public class CategoryMapperImpl implements CategoryMapper {
         Category category1 = new Category();
 
         category1.setIdMainCategory( categoryDTOToCategory( category ) );
+        category1.setPhotoUrl( category.getPhotoUrl() );
         try {
             if ( category.getDateModified() != null ) {
                 category1.setDateModified( new SimpleDateFormat( "yyyy-MM-dd" ).parse( category.getDateModified() ) );

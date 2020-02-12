@@ -4,7 +4,7 @@
 package com.joalsaoss.ecommerce.services.interfaces;
 
 /**
- * @author Sumset
+ * @author Jose Alvaro
  *
  */
 public interface IProductServiceDelete {

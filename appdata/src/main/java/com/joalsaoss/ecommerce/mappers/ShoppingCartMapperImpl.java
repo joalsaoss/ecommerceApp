@@ -4,6 +4,8 @@ import com.joalsaoss.ecommerce.dtos.ShoppingCartDTO;
 import com.joalsaoss.ecommerce.models.Customer;
 import com.joalsaoss.ecommerce.models.Product;
 import com.joalsaoss.ecommerce.models.ShoppingCart;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.Generated;
@@ -11,7 +13,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2020-02-12T09:40:29-0500",
+    date = "2020-02-12T15:29:19-0500",
     comments = "version: 1.3.1.Final, compiler: javac, environment: Java 1.8.0_212 (Oracle Corporation)"
 )
 @Component
@@ -27,10 +29,14 @@ public class ShoppingCartMapperImpl implements ShoppingCartMapper {
 
         shoppingCartDTO.setIdShoppingCart( shoppingCart.getIdShoppingCart() );
         shoppingCartDTO.setIdProduct( shoppingCartIdProductIdProduct( shoppingCart ) );
-        shoppingCartDTO.setDateModified( shoppingCart.getDateModified() );
+        if ( shoppingCart.getDateModified() != null ) {
+            shoppingCartDTO.setDateModified( new SimpleDateFormat( "yyyy-MM-dd" ).format( shoppingCart.getDateModified() ) );
+        }
         shoppingCartDTO.setCustomerName( shoppingCartIdCustomerFirstName( shoppingCart ) );
         shoppingCartDTO.setProductName( shoppingCartIdProductDescription( shoppingCart ) );
-        shoppingCartDTO.setDateAdded( shoppingCart.getDateAdded() );
+        if ( shoppingCart.getDateAdded() != null ) {
+            shoppingCartDTO.setDateAdded( new SimpleDateFormat( "yyyy-MM-dd" ).format( shoppingCart.getDateAdded() ) );
+        }
         shoppingCartDTO.setIdCustomer( shoppingCartIdCustomerIdCustomer( shoppingCart ) );
         shoppingCartDTO.setStatus( shoppingCart.getStatus() );
 
@@ -48,8 +54,22 @@ public class ShoppingCartMapperImpl implements ShoppingCartMapper {
         shoppingCart1.setIdCustomer( shoppingCartDTOToCustomer( shoppingCart ) );
         shoppingCart1.setIdProduct( shoppingCartDTOToProduct( shoppingCart ) );
         shoppingCart1.setIdShoppingCart( shoppingCart.getIdShoppingCart() );
-        shoppingCart1.setDateModified( shoppingCart.getDateModified() );
-        shoppingCart1.setDateAdded( shoppingCart.getDateAdded() );
+        try {
+            if ( shoppingCart.getDateModified() != null ) {
+                shoppingCart1.setDateModified( new SimpleDateFormat( "yyyy-MM-dd" ).parse( shoppingCart.getDateModified() ) );
+            }
+        }
+        catch ( ParseException e ) {
+            throw new RuntimeException( e );
+        }
+        try {
+            if ( shoppingCart.getDateAdded() != null ) {
+                shoppingCart1.setDateAdded( new SimpleDateFormat( "yyyy-MM-dd" ).parse( shoppingCart.getDateAdded() ) );
+            }
+        }
+        catch ( ParseException e ) {
+            throw new RuntimeException( e );
+        }
         shoppingCart1.setStatus( shoppingCart.getStatus() );
 
         return shoppingCart1;
