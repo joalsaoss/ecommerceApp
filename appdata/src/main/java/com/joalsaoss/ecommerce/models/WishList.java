@@ -52,9 +52,9 @@ public class WishList implements Serializable {
 
 	@JoinColumn(name = "IDCUSTOMER", referencedColumnName = "IDCUSTOMER")
 	@ManyToOne(optional = false)
-	private Long IdCustomer;
+	private Customer idCustomer;
 
 	@JoinColumn(name = "IDPRODUCT", referencedColumnName = "IDPRODUCT")
 	@ManyToOne(optional = false)
-	private Long idProduct;
+	private Product idProduct;
 }

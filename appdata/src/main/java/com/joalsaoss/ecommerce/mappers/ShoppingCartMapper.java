@@ -25,14 +25,14 @@ public interface ShoppingCartMapper {
 	 * @param shoppingCart
 	 * @return
 	 */
-	@Mapping(source = "product.idShoppingCart", target = "idShoppingCart")
-	@Mapping(source = "product.idCustomer.idCustomer", target = "idCustomer")
-	@Mapping(source = "product.idCustomer.firstName" + " " + "product.idCustomer.lastName", target = "customerName")
-	@Mapping(source = "product.idProduct.idProduct", target = "idProduct")
-	@Mapping(source = "product.idProduct.description", target = "description")
-	@Mapping(source = "product.dateAdded", target = "dateAdded", dateFormat = EcommConstants.FORMAT_DATE_SHORT_WITH_DASH)
-	@Mapping(source = "product.dateModified", target = "dateModified", dateFormat = EcommConstants.FORMAT_DATE_SHORT_WITH_DASH)
-	@Mapping(source = "product.status", target = "status")
+	@Mapping(source = "shoppingCart.idShoppingCart", target = "idShoppingCart")
+	@Mapping(source = "shoppingCart.idCustomer.idCustomer", target = "idCustomer")
+	@Mapping(source = "shoppingCart.idCustomer.firstName", target = "customerName")
+	@Mapping(source = "shoppingCart.idProduct.idProduct", target = "idProduct")
+	@Mapping(source = "shoppingCart.idProduct.description", target = "productName")
+	@Mapping(source = "shoppingCart.dateAdded", target = "dateAdded", dateFormat = EcommConstants.FORMAT_DATE_SHORT_WITH_DASH)
+	@Mapping(source = "shoppingCart.dateModified", target = "dateModified", dateFormat = EcommConstants.FORMAT_DATE_SHORT_WITH_DASH)
+	@Mapping(source = "shoppingCart.status", target = "status")
 	ShoppingCartDTO shoppingCartEntityToDTO(ShoppingCart shoppingCart);
 
 	/**
@@ -40,12 +40,12 @@ public interface ShoppingCartMapper {
 	 * @param shoppingCart
 	 * @return
 	 */
-	@Mapping(source = "product.idShoppingCart", target = "idShoppingCart")
-	@Mapping(source = "product.idCustomer.idCustomer", target = "idCustomer")
-	@Mapping(source = "product.idProduct.idProduct", target = "idProduct")
-	@Mapping(source = "product.dateAdded", target = "dateAdded", dateFormat = EcommConstants.FORMAT_DATE_SHORT_WITH_DASH)
-	@Mapping(source = "product.dateModified", target = "dateModified", dateFormat = EcommConstants.FORMAT_DATE_SHORT_WITH_DASH)
-	@Mapping(source = "product.status", target = "status")
+	@Mapping(source = "shoppingCart.idShoppingCart", target = "idShoppingCart")
+	@Mapping(source = "shoppingCart.idCustomer", target = "idCustomer.idCustomer")
+	@Mapping(source = "shoppingCart.idProduct", target = "idProduct.idProduct")
+	@Mapping(source = "shoppingCart.dateAdded", target = "dateAdded", dateFormat = EcommConstants.FORMAT_DATE_SHORT_WITH_DASH)
+	@Mapping(source = "shoppingCart.dateModified", target = "dateModified", dateFormat = EcommConstants.FORMAT_DATE_SHORT_WITH_DASH)
+	@Mapping(source = "shoppingCart.status", target = "status")
 	ShoppingCart shoppingCartDTOToEntity(ShoppingCartDTO shoppingCart);
 
 	/**

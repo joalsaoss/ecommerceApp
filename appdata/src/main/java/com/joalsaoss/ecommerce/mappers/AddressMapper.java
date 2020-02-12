@@ -37,7 +37,7 @@ public interface AddressMapper {
 	 */
 	@Mapping(source = "address.idAddress", target = "idAddress")
 	@Mapping(source = "address.address", target = "address")
-	@Mapping(source = "address.idCity", target = "idCity")
+	@Mapping(source = "address.idCity", target = "idCity.idCity")
 	Address addressDTOToEntity(AddressDTO address);
 	
 	/**
