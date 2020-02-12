@@ -49,7 +49,7 @@ public class EcommMessages {
 	 * @param strLanguage
 	 * @return
 	 */
-	public static String obtenerMensaje(String constant, MessageEnum type, String strLanguage) {
+	public static String getMessage(String constant, MessageEnum type, String strLanguage) {
 		Locale language = new Locale("");
 		if (strLanguage != null) {
 			language = new Locale(strLanguage);

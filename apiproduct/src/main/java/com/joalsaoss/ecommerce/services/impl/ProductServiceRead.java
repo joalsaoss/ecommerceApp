@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import com.joalsaoss.ecommerce.dtos.GenericDTO;
 import com.joalsaoss.ecommerce.dtos.ProductDTO;
+import com.joalsaoss.ecommerce.exceptions.EcommException;
 import com.joalsaoss.ecommerce.mappers.CategoryMapper;
 import com.joalsaoss.ecommerce.mappers.PhotoProductMapper;
 import com.joalsaoss.ecommerce.mappers.ProductMapper;
@@ -46,7 +47,7 @@ public class ProductServiceRead implements IProductServiceRead {
 	ProductMapper productMapper;
 	
 	@Override
-	public GenericDTO getAllProducts() {
+	public GenericDTO getAllProducts() throws EcommException {
 		GenericDTO result = new GenericDTO();		
 		List<Product> lstProducts = productServiceRepo.getAll();		
 		List<ProductDTO> lstResult = productMapper.productEntitiesToDTO(lstProducts);		

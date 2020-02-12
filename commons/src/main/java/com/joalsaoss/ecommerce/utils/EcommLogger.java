@@ -5,12 +5,14 @@ package com.joalsaoss.ecommerce.utils;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.stereotype.Component;
 
 
 /**
  * @author Jose Alvaro
  *
  */
+@Component
 public class EcommLogger {
 	
 	public static final EcommLogger ECOMM_LOGGER = new EcommLogger();

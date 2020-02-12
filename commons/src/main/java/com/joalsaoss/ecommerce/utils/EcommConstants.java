@@ -153,7 +153,11 @@ public class EcommConstants {
 	public static final String MENSAJE_CAMBIAR_ESTADO_COMPONENTE_GASTO_CORRECTO = "mensaje_cambiar_estado_componente_gasto_correcto";
 	public static final String MENSAJE_MODIFICAR_COMPONENTE_GASTO_CORRECTO = "mensaje_modificar_componente_gasto_correcto";
 	public static final String MENSAJE_OBTENER_COMPONENTE_GASTO_TODOS_CORRECTO = "mensaje_obtener_componente_gasto_todos_correcto";
-
+	
+	
+	public static final String MESSAGE_GETALL_PRODUCTS_OK = "message_getall_products_ok";
+	public static final String MESSAGE_GETALL_PRODUCTS_NOT_FOUND = "message_getall_products_not_found";
+	
 	/**
 	 * Mensajes de error
 	 */
