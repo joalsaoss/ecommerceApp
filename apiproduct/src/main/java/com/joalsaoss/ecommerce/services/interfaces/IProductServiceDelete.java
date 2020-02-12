@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.joalsaoss.ecommerce.services.interfaces.delete;
+package com.joalsaoss.ecommerce.services.interfaces;
 
 /**
  * @author Sumset

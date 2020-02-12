@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.joalsaoss.ecommerce.services.interfaces.read;
+package com.joalsaoss.ecommerce.services.interfaces;
 
 /**
  * @author Sumset
