@@ -13,10 +13,8 @@ import lombok.Data;
 @Data
 public class ProductDTO extends ResponseDTO {
 	Long idProduct;
-	String title;
-	String keywords;
 	String description;
-	int rating;
 	String dateAdded;
 	String dateModified;
+	int rating;
 }

@@ -14,7 +14,7 @@ import lombok.Data;
 public class CategoryDTO extends ResponseDTO {
 	Long idCategory;
 	Long idMainCategory;
-	int sortOrder;
+	String categoryName;
 	String dateAdded;
 	String dateModified;
 	String status;

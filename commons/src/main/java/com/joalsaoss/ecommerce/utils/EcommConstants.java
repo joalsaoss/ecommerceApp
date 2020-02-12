@@ -8,11 +8,11 @@ package com.joalsaoss.ecommerce.utils;
  *
  */
 public class EcommConstants {
-	
+
 	private EcommConstants() {
 		super();
 	}
-	
+
 	/**
 	 * Seguridad Token
 	 */
@@ -30,8 +30,8 @@ public class EcommConstants {
 	public static final String HEADER_CONTENT_TYPE = "Content-Type";
 	public static final String HEADER_APP_JSON = "application/json";
 	public static final String HEADER_ACCEPT = "Accept";
-    public static final String URL = "http://192.168.1.170:8080/seguridadApi";
-	
+	public static final String URL = "http://192.168.1.170:8080/seguridadApi";
+
 	/**
 	 * Log severity
 	 */
@@ -52,7 +52,7 @@ public class EcommConstants {
 	public static final String PRODUCT = "product";
 	public static final String SHOPPINGCART = "shoppingcart";
 	public static final String WISHLIST = "wishlist";
-	
+
 	/**
 	 * Fields by entity
 	 */
@@ -60,7 +60,7 @@ public class EcommConstants {
 	public static final String ADDRESS_ADDRESS = "address.address";
 	public static final String CATEGORY_ID = "category.idCategory";
 	public static final String CATEGORY_IDMAINCATEGORY = "category.idMainCategory";
-	public static final String CATEGORY_SORTORDER = "category.sortOrder";
+	public static final String CATEGORY_CATEGORYNAME = "category.categoryName";
 	public static final String CATEGORY_DATEADDED = "category.dateAdded";
 	public static final String CATEGORY_DATEMODIFIED = "category.dateModified";
 	public static final String CATEGORY_STATUS = "category.status";
@@ -98,26 +98,29 @@ public class EcommConstants {
 	/**
 	 * Controllers constants
 	 */
-	public static final String WEB_CONTROLLER_GET_CUSTOMERS = "/consultar_lista_compuesta";
-	public static final String WEB_CONTROLLER_GET_PRODUCTS = "/restablecer";
-	public static final String WEB_CONTROLLER_GET_CATEGORIES = "/restablecer-mensaje";
 	public static final String WEB_CONTROLLER_GET_HOME = "/home";
 	public static final String WEB_CONTROLLER_REQUEST_INDEX = "/";
-	
+
 	// Category
-	public static final String CATEGORY_CONTROLLER_CREATE_CATEGORY = "/administracion_lista_compuesta/registrar_pot_proyecto_instrumento";
-	public static final String CATEGORY_CONTROLLER_UPDATE_CATEGORY = "/administracion_lista_compuesta/modificar_pot_proyecto_instrumento";
-	public static final String CATEGORY_CONTROLLER_GETALL_CATEGORY = "/administracion_lista_compuesta/obtener_todos_pot_proyecto_instrumento";
-	public static final String CATEGORY_CONTROLLER_GETBYID_CATEGORY = "/administracion_lista_compuesta/obtener_todos_pot_instrumento";
-	
+	public static final String CATEGORY_CONTROLLER_CREATE_CATEGORY = "/category/create";
+	public static final String CATEGORY_CONTROLLER_UPDATE_CATEGORY = "/category/update";
+	public static final String CATEGORY_CONTROLLER_GETALL_CATEGORY = "/category/getall";
+	public static final String CATEGORY_CONTROLLER_GETBYID_CATEGORY = "/category/getbyid/{id}";
+
 	// Customer
-	public static final String CUSTOMER_CONTROLLER_CREATE_CUSTOMER = "/administracion_lista_compuesta/registrar_linea_inversion";
-	public static final String CUSTOMER_CONTROLLER_UPDATE_CUSTOMER = "/administracion_lista_compuesta/modificar_linea_inversion";
-	public static final String CUSTOMER_CONTROLLER_GETALL_CUSTOMER = "/administracion_lista_compuesta/obtener_todos_linea_inversion";
-	public static final String CUSTOMER_CONTROLLER_GETBYID_CUSTOMER = "/administracion_lista_compuesta/modificar_estado_linea_inversion/{id}";
-	
+	public static final String CUSTOMER_CONTROLLER_CREATE_CUSTOMER = "/customer/create";
+	public static final String CUSTOMER_CONTROLLER_UPDATE_CUSTOMER = "/customer/update";
+	public static final String CUSTOMER_CONTROLLER_GETALL_CUSTOMER = "/customer/getall";
+	public static final String CUSTOMER_CONTROLLER_GETBYID_CUSTOMER = "/customer/getbyid/{id}";
+
+	// Products
+	public static final String PRODUCT_CONTROLLER_CREATE_PRODUCT = "/product/create";
+	public static final String PRODUCT_CONTROLLER_UPDATE_PRODUCT = "/product/update";
+	public static final String PRODUCT_CONTROLLER_GETALL_PRODUCT = "/product/getall";
+	public static final String PRODUCT_CONTROLLER_GETBYID_PRODUCT = "/product/getbyid/{id}";
+
 	/**
-	 * Longitud campos
+	 * Fields length
 	 */
 	public static final int BUZON_USUARIO_ORIGINA_MIN_LENGTH = 1;
 	public static final int BUZON_USUARIO_ORIGINA_MAX_LENGTH = 100;
@@ -125,7 +128,7 @@ public class EcommConstants {
 	public static final int BUZON_USUARIO_DESTINO_MAX_LENGTH = 100;
 	public static final int BUZON_USUARIO_MENSAJE_MIN_LENGTH = 1;
 	public static final int BUZON_USUARIO_MENSAJE_MAX_LENGTH = 10000;
-	
+
 	/**
 	 * Formatos
 	 */
@@ -150,11 +153,11 @@ public class EcommConstants {
 	public static final String MENSAJE_CAMBIAR_ESTADO_COMPONENTE_GASTO_CORRECTO = "mensaje_cambiar_estado_componente_gasto_correcto";
 	public static final String MENSAJE_MODIFICAR_COMPONENTE_GASTO_CORRECTO = "mensaje_modificar_componente_gasto_correcto";
 	public static final String MENSAJE_OBTENER_COMPONENTE_GASTO_TODOS_CORRECTO = "mensaje_obtener_componente_gasto_todos_correcto";
-	
+
 	/**
 	 * Mensajes de error
 	 */
-	public static final String MENSAJE_NO_ENCONTRADO = "No se encontro el mensaje seleccionado";
+	public static final String MESSAGE_NOT_FOUND = "Mensaje no encontrado";
 	public static final String MENSAJE_ARCHIVO_PROCESADO_NO_ENCONTRADO = "mensaje_archivo_procesado_no_encontrado";
 	public static final String MENSAJE_BANCO_DE_PROYECTOS_NO_ENCONTRADO = "mensaje_banco_de_proyectos_no_encontrado";
 	/**
@@ -171,13 +174,13 @@ public class EcommConstants {
 	public static final int ESTADO_INACTIVO = 0;
 	public static final int ESTADO_MENSAJE_LEIDO = 1;
 	public static final int ESTADO_MENSAJE_NO_LEIDO = 0;
-	
+
 	/**
 	 * 
 	 */
 	public static final String ESTADO_STRING_ACTIVO = "Activo";
 	public static final String ESTADO_STRING_INACTIVO = "Inactivo";
-	
+
 	/**
 	 * 
 	 */
