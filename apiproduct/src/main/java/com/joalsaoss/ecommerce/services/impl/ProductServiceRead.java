@@ -17,9 +17,6 @@ import com.joalsaoss.ecommerce.exceptions.EcommException;
 import com.joalsaoss.ecommerce.mappers.CategoryMapper;
 import com.joalsaoss.ecommerce.mappers.PhotoProductMapper;
 import com.joalsaoss.ecommerce.mappers.ProductMapper;
-import com.joalsaoss.ecommerce.models.Category;
-import com.joalsaoss.ecommerce.models.PhotoProducts;
-import com.joalsaoss.ecommerce.models.Product;
 import com.joalsaoss.ecommerce.servicerepo.interfaces.ICategoryServiceRepo;
 import com.joalsaoss.ecommerce.servicerepo.interfaces.IPhotoProductServiceRepo;
 import com.joalsaoss.ecommerce.servicerepo.interfaces.IProductServiceRepo;
@@ -53,8 +50,9 @@ public class ProductServiceRead implements IProductServiceRead {
 	@Override
 	public GenericDTO getAllProducts() throws EcommException {
 		GenericDTO result = new GenericDTO();
-		List<Product> lstProducts = productServiceRepo.getAll();
-		List<ProductDTO> lstResult = productMapper.productEntitiesToDTO(lstProducts);
+		List<ProductDTO> lstResult = (productServiceRepo.getAll() != null && productServiceRepo.getAll().size() > 0)
+				? productMapper.productEntitiesToDTO(productServiceRepo.getAll())
+				: null;
 		result.setLstObjectsDTO(new ArrayList<>(lstResult));
 		return result;
 	}
@@ -62,8 +60,9 @@ public class ProductServiceRead implements IProductServiceRead {
 	@Override
 	public GenericDTO getAllCategories() throws EcommException {
 		GenericDTO result = new GenericDTO();
-		List<Category> lstCategory = categoryServiceRepo.getAll();
-		List<CategoryDTO> lstResult = categoryMapper.categoryEntitiesToDTO(lstCategory);
+		List<CategoryDTO> lstResult = (categoryServiceRepo.getAll() != null && categoryServiceRepo.getAll().size() > 0)
+				? categoryMapper.categoryEntitiesToDTO(categoryServiceRepo.getAll())
+				: null;
 		result.setLstObjectsDTO(new ArrayList<>(lstResult));
 		return result;
 	}
@@ -71,31 +70,36 @@ public class ProductServiceRead implements IProductServiceRead {
 	@Override
 	public GenericDTO getAllPhotoProducts() throws EcommException {
 		GenericDTO result = new GenericDTO();
-		List<PhotoProducts> lstCategory = photoProductServiceRepo.getAll();
-		List<PhotoProductsDTO> lstResult = photoProductMapper.photoProductsEntitiesToDTO(lstCategory);
+		List<PhotoProductsDTO> lstResult = (photoProductServiceRepo.getAll() != null
+				&& photoProductServiceRepo.getAll().size() > 0)
+						? photoProductMapper.photoProductsEntitiesToDTO(photoProductServiceRepo.getAll())
+						: null;
 		result.setLstObjectsDTO(new ArrayList<>(lstResult));
 		return result;
 	}
 
 	@Override
 	public ProductDTO getProductById(ProductDTO productDTO) throws EcommException {
-		ProductDTO result = new ProductDTO();
-		result = productServiceRepo.getById(1L) != null
+		ProductDTO result = productServiceRepo.getById(productDTO.getIdProduct()) != null
 				? productMapper.productEntityToDTO(productServiceRepo.getById(1L))
-				: null; //Add lambda expression for codeResponse and messageResponse
+				: null; // Add lambda expression for codeResponse and messageResponse
 		return result;
 	}
 
 	@Override
 	public CategoryDTO getCategoryById(CategoryDTO categoryDTO) throws EcommException {
-		// TODO Auto-generated method stub
-		return null;
+		CategoryDTO result = categoryServiceRepo.getById(categoryDTO.getIdCategory()) != null
+				? categoryMapper.categoryEntityToDTO(categoryServiceRepo.getById(categoryDTO.getIdCategory()))
+				: null;
+		return result;
 	}
 
 	@Override
 	public PhotoProductsDTO getPhotoProductById(PhotoProductsDTO photoProductsDTO) throws EcommException {
-		// TODO Auto-generated method stub
-		return null;
+		PhotoProductsDTO result = photoProductServiceRepo.getById(photoProductsDTO.getIdPhotoProduct()) != null
+				? photoProductMapper.photoProductsEntityToDTO(
+						photoProductServiceRepo.getById(photoProductsDTO.getIdPhotoProduct()))
+				: null;
+		return result;
 	}
-
 }

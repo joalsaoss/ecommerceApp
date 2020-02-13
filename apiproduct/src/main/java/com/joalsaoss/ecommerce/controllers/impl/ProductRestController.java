@@ -50,14 +50,14 @@ public class ProductRestController implements IProductRestController {
 		GenericDTO response = new GenericDTO();
 		try {
 			response = productRead.getAllProducts();
-			ecommLogger.messageLogger(EcommMessages.getMessage(EcommConstants.MENSAJE_EXCEPCION_GENERICA, ""),
+			ecommLogger.messageLogger(EcommMessages.getMessage(EcommConstants.MESSAGE_GENERIC_EXCEPCION, ""),
 					EcommConstants.SEVERIDAD_INFO, ProductRestController.class);
 		} catch (EcommException e) {
-			response.setCoderesponse(EcommConstants.RESPUESTA_ERROR_EXTERNO);
+			response.setCoderesponse(EcommConstants.EXTERNAL_ERROR_RESPONSE);
 			response.setMsgresponse(
-					EcommMessages.getMessage(EcommConstants.MENSAJE_EXCEPCION_GENERICA, MessageEnum.ERRORS, ""));
+					EcommMessages.getMessage(EcommConstants.MESSAGE_GENERIC_EXCEPCION, MessageEnum.ERRORS, ""));
 
-			ecommLogger.messageLogger(EcommMessages.getMessage(EcommConstants.MENSAJE_EXCEPCION_GENERICA, ""),
+			ecommLogger.messageLogger(EcommMessages.getMessage(EcommConstants.MESSAGE_GENERIC_EXCEPCION, ""),
 					EcommConstants.SEVERIDAD_ERROR, ProductRestController.class);
 		}
 		return response;

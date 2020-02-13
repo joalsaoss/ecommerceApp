@@ -65,5 +65,4 @@ public class EcommMessages {
 			return EcommConstants.MESSAGE_NOT_FOUND + ": " + constant;
 		}
 	}
-
 }

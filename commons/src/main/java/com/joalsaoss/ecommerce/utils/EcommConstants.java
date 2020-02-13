@@ -168,10 +168,14 @@ public class EcommConstants {
 	/**
 	 * Validation messages
 	 */
-	public static final String MENSAJE_VALIDACION_APROPIACION_RESERVA_VACIO = "mensaje_validacion_apropiacion_reserva_vacio";
-	public static final String MENSAJE_VALIDACION_APROPIACION_DEFINITIVA_VACIO = "mensaje_validacion_apropiacion_definitiva_vacio";
-	public static final String MENSAJE_VALIDACION_MENSAJE_TAMANO_INVALIDO = "mensaje_validacion_mensaje_tamano_invalido";
-
+	public static final String MESSAGE_VALIDATION_ADDRESS_EMPTY = "message_validation_address_empty";
+	public static final String MESSAGE_VALIDATION_CITY_EMPTY = "message_validation_city_empty";
+	public static final String MESSAGE_VALIDATION_CUSTOMER_EMPTY = "message_validation_customer_empty";
+	public static final String MESSAGE_VALIDATION_CATEGORY_EMPTY = "message_validation_category_empty";
+	public static final String MESSAGE_VALIDATION_PHOTOPRODUCT_EMPTY = "message_validation_photoproduct_empty";
+	public static final String MESSAGE_VALIDATION_PRODUCT_EMPTY = "message_validation_product_empty";
+	public static final String MESSAGE_VALIDATION_SHOPPINGCART_EMPTY = "message_validation_shoppingcart_empty";
+	public static final String MESSAGE_VALIDATION_WISHLIST_EMPTY = "message_validation_wishlist_empty";
 	/**
 	 * 
 	 */
