@@ -8,7 +8,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.joalsaoss.ecommerce.controllers.interfaces.IProductRestController;
+import com.joalsaoss.ecommerce.dtos.CategoryDTO;
 import com.joalsaoss.ecommerce.dtos.GenericDTO;
+import com.joalsaoss.ecommerce.dtos.PhotoProductsDTO;
+import com.joalsaoss.ecommerce.dtos.ProductDTO;
 import com.joalsaoss.ecommerce.enums.MessageEnum;
 import com.joalsaoss.ecommerce.exceptions.EcommException;
 import com.joalsaoss.ecommerce.services.interfaces.IProductServiceCreate;
@@ -58,5 +61,89 @@ public class ProductRestController implements IProductRestController {
 					EcommConstants.SEVERIDAD_ERROR, ProductRestController.class);
 		}
 		return response;
+	}
+
+	@Override
+	public GenericDTO getAllCategories() throws EcommException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public GenericDTO getAllPhotoProducts() throws EcommException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ProductDTO getProductById(ProductDTO productDTO) throws EcommException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CategoryDTO getCategoryById(CategoryDTO categoryDTO) throws EcommException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public PhotoProductsDTO getPhotoProductById(PhotoProductsDTO photoProductsDTO) throws EcommException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CategoryDTO createCategory(CategoryDTO categoryDTO) throws EcommException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public PhotoProductsDTO createPhotoProduct(PhotoProductsDTO photoProductsDTO) throws EcommException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ProductDTO createProduct(ProductDTO productDTO) throws EcommException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CategoryDTO updateCategory(CategoryDTO categoryDTO) throws EcommException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public PhotoProductsDTO updatePhotoProduct(PhotoProductsDTO photoProductsDTO) throws EcommException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ProductDTO updateProduct(ProductDTO productDTO) throws EcommException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CategoryDTO deleteCategory(CategoryDTO categoryDTO) throws EcommException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public PhotoProductsDTO deletePhotoProduct(PhotoProductsDTO photoProductsDTO) throws EcommException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ProductDTO deleteProduct(ProductDTO productDTO) throws EcommException {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

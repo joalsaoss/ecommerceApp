@@ -141,7 +141,7 @@ public class EcommConstants {
 	public static final String FORMAT_SHORT_TIME = "HH:mm";
 
 	/**
-	 * Mensajes normales
+	 * Normal messages
 	 */
 	public static final String MENSAJE_EXITO_CORREO = "mensaje_exito_correo";
 	public static final String MENSAJE_INICIO_SESION_CORRECTO = "mensaje_inicio_sesion_correcto";
@@ -159,13 +159,14 @@ public class EcommConstants {
 	public static final String MESSAGE_GETALL_PRODUCTS_NOT_FOUND = "message_getall_products_not_found";
 	
 	/**
-	 * Mensajes de error
+	 * Error messages
 	 */
 	public static final String MESSAGE_NOT_FOUND = "Mensaje no encontrado";
 	public static final String MENSAJE_ARCHIVO_PROCESADO_NO_ENCONTRADO = "mensaje_archivo_procesado_no_encontrado";
 	public static final String MENSAJE_BANCO_DE_PROYECTOS_NO_ENCONTRADO = "mensaje_banco_de_proyectos_no_encontrado";
+	
 	/**
-	 * Mensajes de validacion
+	 * Validation messages
 	 */
 	public static final String MENSAJE_VALIDACION_APROPIACION_RESERVA_VACIO = "mensaje_validacion_apropiacion_reserva_vacio";
 	public static final String MENSAJE_VALIDACION_APROPIACION_DEFINITIVA_VACIO = "mensaje_validacion_apropiacion_definitiva_vacio";
@@ -174,33 +175,24 @@ public class EcommConstants {
 	/**
 	 * 
 	 */
-	public static final int ESTADO_ACTIVO = 1;
-	public static final int ESTADO_INACTIVO = 0;
-	public static final int ESTADO_MENSAJE_LEIDO = 1;
-	public static final int ESTADO_MENSAJE_NO_LEIDO = 0;
+	public static final int ACTIVE_STATUS = 1;
+	public static final int INACTIVE_STATUS = 0;
 
 	/**
 	 * 
 	 */
-	public static final String ESTADO_STRING_ACTIVO = "Activo";
-	public static final String ESTADO_STRING_INACTIVO = "Inactivo";
+	public static final String STRING_ACTIVE_STATUS = "Activo";
+	public static final String STRING_INACTIVE_STATUS = "Inactivo";
 
 	/**
-	 * 
+	 * Response HTTP
 	 */
-	public static final String TIPO_PD = "PD";
-	public static final String TIPO_PI = "PI";
+	public static final int SUCCESS_RESPONSE = 200;
+	public static final int EXTERNAL_ERROR_RESPONSE = 400;
+	public static final int EXCEPCION_RESPONSE = 500;
 
 	/**
-	 * Respuestas HTTP
-	 */
-	public static final int RESPUESTA_EXITOSA = 200;
-	public static final int RESPUESTA_ERROR_EXTERNO = 400;
-	public static final int RESPUESTA_TIEMPO_EXCEDIDO = 408;
-	public static final int RESPUESTA_EXCEPCION = 500;
-
-	/**
-	 * Constantes email.
+	 * Email constants.
 	 */
 	public static final String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
 			+ "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
@@ -208,5 +200,5 @@ public class EcommConstants {
 	/*
 	 * Mensajes expcepciones
 	 */
-	public static final String MENSAJE_EXCEPCION_GENERICA = "mensaje_excepcion_generica";
+	public static final String MESSAGE_GENERIC_EXCEPCION = "mensaje_excepcion_generica";
 }
