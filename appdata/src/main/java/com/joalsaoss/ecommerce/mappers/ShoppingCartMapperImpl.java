@@ -13,8 +13,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2020-02-13T22:40:50-0500",
-    comments = "version: 1.3.1.Final, compiler: javac, environment: Java 1.8.0_131 (Oracle Corporation)"
+    date = "2020-02-14T14:36:20-0500",
+    comments = "version: 1.3.1.Final, compiler: javac, environment: Java 1.8.0_212 (Oracle Corporation)"
 )
 @Component
 public class ShoppingCartMapperImpl implements ShoppingCartMapper {

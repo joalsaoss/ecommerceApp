@@ -5,7 +5,10 @@ package com.joalsaoss.ecommerce.controllers.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.joalsaoss.ecommerce.controllers.interfaces.IBuyRestController;
 import com.joalsaoss.ecommerce.dtos.GenericDTO;
@@ -25,6 +28,7 @@ import com.joalsaoss.ecommerce.utils.EcommMessages;
  * @author Jose Alvaro
  *
  */
+@RestController
 public class BuyRestController implements IBuyRestController {
 
 	@Autowired
@@ -80,9 +84,9 @@ public class BuyRestController implements IBuyRestController {
 		return response;
 	}
 
-	@PostMapping(EcommConstants.BUY_CONTROLLER_GETBYID_SHOPPINGCART)
+	@GetMapping(EcommConstants.BUY_CONTROLLER_GETBYID_SHOPPINGCART)
 	@Override
-	public ShoppingCartDTO getShoppingCartById(ShoppingCartDTO shoppingCartDTO) throws EcommException {
+	public ShoppingCartDTO getShoppingCartById(@PathVariable("id") Long idShoppingCart) throws EcommException {
 		ShoppingCartDTO response = new ShoppingCartDTO();
 		try {
 
@@ -97,9 +101,9 @@ public class BuyRestController implements IBuyRestController {
 		return response;
 	}
 
-	@PostMapping(EcommConstants.BUY_CONTROLLER_GETBYID_WISHLIST)
+	@GetMapping(EcommConstants.BUY_CONTROLLER_GETBYID_WISHLIST)
 	@Override
-	public WishListDTO getWishListById(WishListDTO wishListDTO) throws EcommException {
+	public WishListDTO getWishListById(@PathVariable("id") Long idWishList) throws EcommException {
 		WishListDTO response = new WishListDTO();
 		try {
 
@@ -116,7 +120,7 @@ public class BuyRestController implements IBuyRestController {
 
 	@PostMapping(EcommConstants.BUY_CONTROLLER_CREATE_SHOPPINGCART)
 	@Override
-	public ShoppingCartDTO createShoppingCart(ShoppingCartDTO shoppingCartDTO) throws EcommException {
+	public ShoppingCartDTO createShoppingCart(@RequestBody ShoppingCartDTO shoppingCartDTO) throws EcommException {
 		ShoppingCartDTO response = new ShoppingCartDTO();
 		try {
 
@@ -133,7 +137,7 @@ public class BuyRestController implements IBuyRestController {
 
 	@PostMapping(EcommConstants.BUY_CONTROLLER_CREATE_WISHLIST)
 	@Override
-	public WishListDTO createWishList(WishListDTO wishListDTO) throws EcommException {
+	public WishListDTO createWishList(@RequestBody WishListDTO wishListDTO) throws EcommException {
 		WishListDTO response = new WishListDTO();
 		try {
 
@@ -150,7 +154,7 @@ public class BuyRestController implements IBuyRestController {
 
 	@PostMapping(EcommConstants.BUY_CONTROLLER_UPDATE_SHOPPINGCART)
 	@Override
-	public ShoppingCartDTO updateShoppingCart(ShoppingCartDTO shoppingCartDTO) throws EcommException {
+	public ShoppingCartDTO updateShoppingCart(@RequestBody ShoppingCartDTO shoppingCartDTO) throws EcommException {
 		ShoppingCartDTO response = new ShoppingCartDTO();
 		try {
 
@@ -167,7 +171,7 @@ public class BuyRestController implements IBuyRestController {
 
 	@PostMapping(EcommConstants.BUY_CONTROLLER_UPDATE_WISHLIST)
 	@Override
-	public WishListDTO updateWishList(WishListDTO wishListDTO) throws EcommException {
+	public WishListDTO updateWishList(@RequestBody WishListDTO wishListDTO) throws EcommException {
 		WishListDTO response = new WishListDTO();
 		try {
 
@@ -182,9 +186,9 @@ public class BuyRestController implements IBuyRestController {
 		return response;
 	}
 
-	@PostMapping(EcommConstants.BUY_CONTROLLER_DELETE_SHOPPINGCART)
+	@GetMapping(EcommConstants.BUY_CONTROLLER_DELETE_SHOPPINGCART)
 	@Override
-	public ShoppingCartDTO deleteShoppingCart(ShoppingCartDTO shoppingCartDTO) throws EcommException {
+	public ShoppingCartDTO deleteShoppingCart(@PathVariable("id") Long idShoppingCart) throws EcommException {
 		ShoppingCartDTO response = new ShoppingCartDTO();
 		try {
 
@@ -199,9 +203,9 @@ public class BuyRestController implements IBuyRestController {
 		return response;
 	}
 
-	@PostMapping(EcommConstants.BUY_CONTROLLER_DELETE_WISHLIST)
+	@GetMapping(EcommConstants.BUY_CONTROLLER_DELETE_WISHLIST)
 	@Override
-	public WishListDTO deleteWishList(WishListDTO wishListDTO) throws EcommException {
+	public WishListDTO deleteWishList(@PathVariable("id") Long idWishList) throws EcommException {
 		WishListDTO response = new WishListDTO();
 		try {
 

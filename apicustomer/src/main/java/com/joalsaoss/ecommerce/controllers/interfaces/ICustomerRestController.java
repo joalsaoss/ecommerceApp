@@ -38,27 +38,27 @@ public interface ICustomerRestController {
 	
 	/**
 	 * 
-	 * @param addressDTO
+	 * @param id
 	 * @return
 	 * @throws EcommException
 	 */
-	AddressDTO getAddressById(AddressDTO addressDTO) throws EcommException;
+	AddressDTO getAddressById(Long id) throws EcommException;
 	
 	/**
 	 * 
-	 * @param cityDTO
+	 * @param id
 	 * @return
 	 * @throws EcommException
 	 */
-	CityDTO getCityById(CityDTO cityDTO) throws EcommException;
+	CityDTO getCityById(Long id) throws EcommException;
 	
 	/**
 	 * 
-	 * @param customerDTO
+	 * @param id
 	 * @return
 	 * @throws EcommException
 	 */
-	CustomerDTO getCustomerById(CustomerDTO customerDTO) throws EcommException;
+	CustomerDTO getCustomerById(Long id) throws EcommException;
 	
 	/**
 	 * 
@@ -110,25 +110,25 @@ public interface ICustomerRestController {
 	
 	/**
 	 * 
-	 * @param addressDTO
+	 * @param id
 	 * @return
 	 * @throws EcommException
 	 */
-	AddressDTO deleteAddress(AddressDTO addressDTO) throws EcommException;
+	AddressDTO deleteAddress(Long id) throws EcommException;
 	
 	/**
 	 * 
-	 * @param cityDTO
+	 * @param id
 	 * @return
 	 * @throws EcommException
 	 */
-	CityDTO deleteCity(CityDTO cityDTO) throws EcommException;
+	CityDTO deleteCity(Long id) throws EcommException;
 	
 	/**
 	 * 
-	 * @param customerDTO
+	 * @param id
 	 * @return
 	 * @throws EcommException
 	 */
-	CustomerDTO deleteCustomer(CustomerDTO customerDTO) throws EcommException;
+	CustomerDTO deleteCustomer(Long id) throws EcommException;
 }

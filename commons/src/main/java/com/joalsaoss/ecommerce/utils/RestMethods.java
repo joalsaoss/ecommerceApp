@@ -22,14 +22,14 @@ public class RestMethods<T> {
 	private String server;
 	private RestTemplate rest;
 	private HttpHeaders headers;
-	
+
 	public RestMethods() {
 		rest = new RestTemplate();
 		headers = new HttpHeaders();
 		headers.add(EcommConstants.HEADER_CONTENT_TYPE, EcommConstants.HEADER_APP_JSON);
 		headers.add(EcommConstants.HEADER_ACCEPT, "*/*");
 	}
-	
+
 	public T post(String dto, ParameterizedTypeReference<T> c, String uri, char type) {
 		server = chooseServer(type);
 		HttpEntity<String> requestEntity = new HttpEntity<>(dto, headers);
@@ -37,7 +37,7 @@ public class RestMethods<T> {
 		setStatus(responseEntity.getStatusCode());
 		return (T) responseEntity.getBody();
 	}
-	
+
 	public T get(String uri, ParameterizedTypeReference<T> c, char type) {
 		server = chooseServer(type);
 		HttpEntity<String> requestEntity = new HttpEntity<>("", headers);
@@ -45,7 +45,7 @@ public class RestMethods<T> {
 		this.setStatus(responseEntity.getStatusCode());
 		return (T) responseEntity.getBody();
 	}
-	
+
 	public void put(T dto, Class<T> c, String uri, char type) {
 		server = chooseServer(type);
 		HttpEntity<T> requestEntity = new HttpEntity<>(dto, headers);
@@ -54,19 +54,22 @@ public class RestMethods<T> {
 		this.setStatus(responseEntity.getStatusCode());
 
 	}
-	
+
 	public String chooseServer(char type) {
-		if (type == 'C') {
-			return server = EcommConstants.SERVICIO_WEB;
-		} else {
-			return server = EcommConstants.URL;
+		switch (type) {
+		case 'B':
+			return server = EcommConstants.WEB_SERVICE_BUY;
+		case 'C':
+			return server = EcommConstants.WEB_SERVICE_CUSTOMER;
+		default:
+			return server = EcommConstants.WEB_SERVICE_PRODUCTS;
 		}
 	}
-	
+
 	public HttpStatus getStatus() {
 		return status;
 	}
-	
+
 	public void setStatus(HttpStatus status) {
 		this.status = status;
 	}

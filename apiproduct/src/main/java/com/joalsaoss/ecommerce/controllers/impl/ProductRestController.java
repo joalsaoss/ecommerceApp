@@ -5,7 +5,9 @@ package com.joalsaoss.ecommerce.controllers.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.joalsaoss.ecommerce.controllers.interfaces.IProductRestController;
@@ -102,9 +104,9 @@ public class ProductRestController implements IProductRestController {
 		return response;
 	}
 
-	@PostMapping(EcommConstants.PRODUCT_CONTROLLER_GETBYID_PRODUCT)
+	@GetMapping(EcommConstants.PRODUCT_CONTROLLER_GETBYID_PRODUCT)
 	@Override
-	public ProductDTO getProductById(ProductDTO productDTO) throws EcommException {
+	public ProductDTO getProductById (@PathVariable("id") Long idProduct) throws EcommException {
 		ProductDTO response = new ProductDTO();
 		try {
 
@@ -119,9 +121,9 @@ public class ProductRestController implements IProductRestController {
 		return response;
 	}
 
-	@PostMapping(EcommConstants.PRODUCT_CONTROLLER_GETBYID_CATEGORY)
+	@GetMapping(EcommConstants.PRODUCT_CONTROLLER_GETBYID_CATEGORY)
 	@Override
-	public CategoryDTO getCategoryById(CategoryDTO categoryDTO) throws EcommException {
+	public CategoryDTO getCategoryById(@PathVariable("id") Long idCategory) throws EcommException {
 		CategoryDTO response = new CategoryDTO();
 		try {
 
@@ -136,8 +138,9 @@ public class ProductRestController implements IProductRestController {
 		return response;
 	}
 
+	@GetMapping(EcommConstants.PRODUCT_CONTROLLER_GETBYID_PHOTOPRODUCT)
 	@Override
-	public PhotoProductsDTO getPhotoProductById(PhotoProductsDTO photoProductsDTO) throws EcommException {
+	public PhotoProductsDTO getPhotoProductById(@PathVariable("id") Long idPhotoProduct) throws EcommException {
 		PhotoProductsDTO response = new PhotoProductsDTO();
 		try {
 
@@ -154,7 +157,7 @@ public class ProductRestController implements IProductRestController {
 
 	@PostMapping(EcommConstants.PRODUCT_CONTROLLER_CREATE_CATEGORY)
 	@Override
-	public CategoryDTO createCategory(CategoryDTO categoryDTO) throws EcommException {
+	public CategoryDTO createCategory(@RequestBody CategoryDTO categoryDTO) throws EcommException {
 		CategoryDTO response = new CategoryDTO();
 		try {
 
@@ -170,7 +173,7 @@ public class ProductRestController implements IProductRestController {
 	}
 
 	@Override
-	public PhotoProductsDTO createPhotoProduct(PhotoProductsDTO photoProductsDTO) throws EcommException {
+	public PhotoProductsDTO createPhotoProduct(@RequestBody PhotoProductsDTO photoProductsDTO) throws EcommException {
 		PhotoProductsDTO response = new PhotoProductsDTO();
 		try {
 
@@ -187,7 +190,7 @@ public class ProductRestController implements IProductRestController {
 
 	@PostMapping(EcommConstants.PRODUCT_CONTROLLER_CREATE_PRODUCT)
 	@Override
-	public ProductDTO createProduct(ProductDTO productDTO) throws EcommException {
+	public ProductDTO createProduct(@RequestBody ProductDTO productDTO) throws EcommException {
 		ProductDTO response = new ProductDTO();
 		try {
 
@@ -204,7 +207,7 @@ public class ProductRestController implements IProductRestController {
 
 	@PostMapping(EcommConstants.PRODUCT_CONTROLLER_UPDATE_CATEGORY)
 	@Override
-	public CategoryDTO updateCategory(CategoryDTO categoryDTO) throws EcommException {
+	public CategoryDTO updateCategory(@RequestBody CategoryDTO categoryDTO) throws EcommException {
 		CategoryDTO response = new CategoryDTO();
 		try {
 
@@ -219,8 +222,9 @@ public class ProductRestController implements IProductRestController {
 		return response;
 	}
 
+	@PostMapping(EcommConstants.PRODUCT_CONTROLLER_UPDATE_PHOTOPRODUCT)
 	@Override
-	public PhotoProductsDTO updatePhotoProduct(PhotoProductsDTO photoProductsDTO) throws EcommException {
+	public PhotoProductsDTO updatePhotoProduct(@RequestBody PhotoProductsDTO photoProductsDTO) throws EcommException {
 		PhotoProductsDTO response = new PhotoProductsDTO();
 		try {
 
@@ -237,7 +241,7 @@ public class ProductRestController implements IProductRestController {
 
 	@PostMapping(EcommConstants.PRODUCT_CONTROLLER_UPDATE_PRODUCT)
 	@Override
-	public ProductDTO updateProduct(ProductDTO productDTO) throws EcommException {
+	public ProductDTO updateProduct(@RequestBody ProductDTO productDTO) throws EcommException {
 		ProductDTO response = new ProductDTO();
 		try {
 
@@ -252,9 +256,9 @@ public class ProductRestController implements IProductRestController {
 		return response;
 	}
 
-	@PostMapping(EcommConstants.PRODUCT_CONTROLLER_DELETE_CATEGORY)
+	@GetMapping(EcommConstants.PRODUCT_CONTROLLER_DELETE_CATEGORY)
 	@Override
-	public CategoryDTO deleteCategory(CategoryDTO categoryDTO) throws EcommException {
+	public CategoryDTO deleteCategory(@PathVariable("id") Long idCategory) throws EcommException {
 		CategoryDTO response = new CategoryDTO();
 		try {
 
@@ -269,8 +273,9 @@ public class ProductRestController implements IProductRestController {
 		return response;
 	}
 
+	@GetMapping(EcommConstants.PRODUCT_CONTROLLER_DELETE_PHOTOPRODUCT)
 	@Override
-	public PhotoProductsDTO deletePhotoProduct(PhotoProductsDTO photoProductsDTO) throws EcommException {
+	public PhotoProductsDTO deletePhotoProduct(@PathVariable("id") Long idPhotoProduct) throws EcommException {
 		PhotoProductsDTO response = new PhotoProductsDTO();
 		try {
 
@@ -285,9 +290,9 @@ public class ProductRestController implements IProductRestController {
 		return response;
 	}
 
-	@PostMapping(EcommConstants.PRODUCT_CONTROLLER_DELETE_PRODUCT)
+	@GetMapping(EcommConstants.PRODUCT_CONTROLLER_DELETE_PRODUCT)
 	@Override
-	public ProductDTO deleteProduct(ProductDTO productDTO) throws EcommException {
+	public ProductDTO deleteProduct(@PathVariable("id") Long idProduct) throws EcommException {
 		ProductDTO response = new ProductDTO();
 		try {
 

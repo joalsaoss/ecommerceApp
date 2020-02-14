@@ -29,19 +29,19 @@ public interface IBuyRestController {
 	
 	/**
 	 * 
-	 * @param shoppingCartDTO
+	 * @param id
 	 * @return
 	 * @throws EcommException
 	 */
-	ShoppingCartDTO getShoppingCartById(ShoppingCartDTO shoppingCartDTO) throws EcommException;
+	ShoppingCartDTO getShoppingCartById(Long id) throws EcommException;
 
 	/**
 	 * 
-	 * @param wishListDTO
+	 * @param id
 	 * @return
 	 * @throws EcommException
 	 */
-	WishListDTO getWishListById(WishListDTO wishListDTO) throws EcommException;
+	WishListDTO getWishListById(Long id) throws EcommException;
 	
 	/**
 	 * 
@@ -77,17 +77,17 @@ public interface IBuyRestController {
 	
 	/**
 	 * 
-	 * @param shoppingCartDTO
+	 * @param id
 	 * @return
 	 * @throws EcommException
 	 */
-	ShoppingCartDTO deleteShoppingCart(ShoppingCartDTO shoppingCartDTO) throws EcommException;
+	ShoppingCartDTO deleteShoppingCart(Long id) throws EcommException;
 
 	/**
 	 * 
-	 * @param wishListDTO
+	 * @param id
 	 * @return
 	 * @throws EcommException
 	 */
-	WishListDTO deleteWishList(WishListDTO wishListDTO) throws EcommException;
+	WishListDTO deleteWishList(Long id) throws EcommException;
 }

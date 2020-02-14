@@ -38,27 +38,27 @@ public interface IProductRestController {
 	
 	/**
 	 * 
-	 * @param productDTO
+	 * @param id
 	 * @return
 	 * @throws EcommException
 	 */
-	ProductDTO getProductById(ProductDTO productDTO) throws EcommException;
+	ProductDTO getProductById(Long id) throws EcommException;
 	
 	/**
 	 * 
-	 * @param categoryDTO
+	 * @param id
 	 * @return
 	 * @throws EcommException
 	 */
-	CategoryDTO getCategoryById(CategoryDTO categoryDTO) throws EcommException;
+	CategoryDTO getCategoryById(Long id) throws EcommException;
 	
 	/**
 	 * 
-	 * @param photoProductsDTO
+	 * @param id
 	 * @return
 	 * @throws EcommException
 	 */
-	PhotoProductsDTO getPhotoProductById(PhotoProductsDTO photoProductsDTO) throws EcommException;
+	PhotoProductsDTO getPhotoProductById(Long id) throws EcommException;
 	
 	/*CREATE*/
 	/**
@@ -111,27 +111,28 @@ public interface IProductRestController {
 	ProductDTO updateProduct(ProductDTO productDTO)  throws EcommException;
 	
 	/*DELETE*/
-	/**
-	 * 
-	 * @param categoryDTO
-	 * @return
-	 * @throws EcommException
-	 */
-	CategoryDTO deleteCategory(CategoryDTO categoryDTO) throws EcommException;
 	
 	/**
 	 * 
-	 * @param photoProductsDTO
+	 * @param id
 	 * @return
 	 * @throws EcommException
 	 */
-	PhotoProductsDTO deletePhotoProduct(PhotoProductsDTO photoProductsDTO) throws EcommException;
+	CategoryDTO deleteCategory(Long id) throws EcommException;
 	
 	/**
 	 * 
-	 * @param productDTO
+	 * @param id
 	 * @return
 	 * @throws EcommException
 	 */
-	ProductDTO deleteProduct(ProductDTO productDTO)  throws EcommException;
+	PhotoProductsDTO deletePhotoProduct(Long id) throws EcommException;
+	
+	/**
+	 * 
+	 * @param id
+	 * @return
+	 * @throws EcommException
+	 */
+	ProductDTO deleteProduct(Long id)  throws EcommException;
 }

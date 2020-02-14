@@ -5,7 +5,9 @@ package com.joalsaoss.ecommerce.controllers.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.joalsaoss.ecommerce.controllers.interfaces.ICustomerRestController;
@@ -102,9 +104,9 @@ public class CustomerRestController implements ICustomerRestController {
 		return response;
 	}
 
-	@PostMapping(EcommConstants.CUSTOMER_CONTROLLER_GETBYID_ADDRESS)
+	@GetMapping(EcommConstants.CUSTOMER_CONTROLLER_GETBYID_ADDRESS)
 	@Override
-	public AddressDTO getAddressById(AddressDTO addressDTO) throws EcommException {
+	public AddressDTO getAddressById(@PathVariable("id") Long idAddress) throws EcommException {
 		AddressDTO response = new AddressDTO();
 		try {
 
@@ -119,9 +121,9 @@ public class CustomerRestController implements ICustomerRestController {
 		return response;
 	}
 
-	@PostMapping(EcommConstants.CUSTOMER_CONTROLLER_GETBYID_CITY)
+	@GetMapping(EcommConstants.CUSTOMER_CONTROLLER_GETBYID_CITY)
 	@Override
-	public CityDTO getCityById(CityDTO cityDTO) throws EcommException {
+	public CityDTO getCityById(@PathVariable("id") Long idCity) throws EcommException {
 		CityDTO response = new CityDTO();
 		try {
 
@@ -136,9 +138,9 @@ public class CustomerRestController implements ICustomerRestController {
 		return response;
 	}
 
-	@PostMapping(EcommConstants.CUSTOMER_CONTROLLER_GETBYID_CUSTOMER)
+	@GetMapping(EcommConstants.CUSTOMER_CONTROLLER_GETBYID_CUSTOMER)
 	@Override
-	public CustomerDTO getCustomerById(CustomerDTO customerDTO) throws EcommException {
+	public CustomerDTO getCustomerById(@PathVariable("id") Long idCustomer) throws EcommException {
 		CustomerDTO response = new CustomerDTO();
 		try {
 
@@ -155,7 +157,7 @@ public class CustomerRestController implements ICustomerRestController {
 
 	@PostMapping(EcommConstants.CUSTOMER_CONTROLLER_CREATE_ADDRESS)
 	@Override
-	public AddressDTO createAddress(AddressDTO addressDTO) throws EcommException {
+	public AddressDTO createAddress(@RequestBody AddressDTO addressDTO) throws EcommException {
 		AddressDTO response = new AddressDTO();
 		try {
 
@@ -172,7 +174,7 @@ public class CustomerRestController implements ICustomerRestController {
 
 	@PostMapping(EcommConstants.CUSTOMER_CONTROLLER_CREATE_CITY)
 	@Override
-	public CityDTO createCity(CityDTO cityDTO) throws EcommException {
+	public CityDTO createCity(@RequestBody CityDTO cityDTO) throws EcommException {
 		CityDTO response = new CityDTO();
 		try {
 
@@ -189,7 +191,7 @@ public class CustomerRestController implements ICustomerRestController {
 
 	@PostMapping(EcommConstants.CUSTOMER_CONTROLLER_CREATE_CUSTOMER)
 	@Override
-	public CustomerDTO createCustomer(CustomerDTO customerDTO) throws EcommException {
+	public CustomerDTO createCustomer(@RequestBody CustomerDTO customerDTO) throws EcommException {
 		CustomerDTO response = new CustomerDTO();
 		try {
 
@@ -206,7 +208,7 @@ public class CustomerRestController implements ICustomerRestController {
 
 	@PostMapping(EcommConstants.CUSTOMER_CONTROLLER_UPDATE_ADDRESS)
 	@Override
-	public AddressDTO updateAddress(AddressDTO addressDTO) throws EcommException {
+	public AddressDTO updateAddress(@RequestBody AddressDTO addressDTO) throws EcommException {
 		AddressDTO response = new AddressDTO();
 		try {
 
@@ -223,7 +225,7 @@ public class CustomerRestController implements ICustomerRestController {
 
 	@PostMapping(EcommConstants.CUSTOMER_CONTROLLER_UPDATE_CITY)
 	@Override
-	public CityDTO updateCity(CityDTO cityDTO) throws EcommException {
+	public CityDTO updateCity(@RequestBody CityDTO cityDTO) throws EcommException {
 		CityDTO response = new CityDTO();
 		try {
 
@@ -240,7 +242,7 @@ public class CustomerRestController implements ICustomerRestController {
 
 	@PostMapping(EcommConstants.CUSTOMER_CONTROLLER_UPDATE_CUSTOMER)
 	@Override
-	public CustomerDTO updateCustomer(CustomerDTO customerDTO) throws EcommException {
+	public CustomerDTO updateCustomer(@RequestBody CustomerDTO customerDTO) throws EcommException {
 		CustomerDTO response = new CustomerDTO();
 		try {
 
@@ -255,9 +257,9 @@ public class CustomerRestController implements ICustomerRestController {
 		return response;
 	}
 
-	@PostMapping(EcommConstants.CUSTOMER_CONTROLLER_DELETE_ADDRESS)
+	@GetMapping(EcommConstants.CUSTOMER_CONTROLLER_DELETE_ADDRESS)
 	@Override
-	public AddressDTO deleteAddress(AddressDTO addressDTO) throws EcommException {
+	public AddressDTO deleteAddress(@PathVariable("id") Long idAddress) throws EcommException {
 		AddressDTO response = new AddressDTO();
 		try {
 
@@ -272,9 +274,9 @@ public class CustomerRestController implements ICustomerRestController {
 		return response;
 	}
 
-	@PostMapping(EcommConstants.CUSTOMER_CONTROLLER_DELETE_CITY)
+	@GetMapping(EcommConstants.CUSTOMER_CONTROLLER_DELETE_CITY)
 	@Override
-	public CityDTO deleteCity(CityDTO cityDTO) throws EcommException {
+	public CityDTO deleteCity(@PathVariable("id") Long idCity) throws EcommException {
 		CityDTO response = new CityDTO();
 		try {
 
@@ -289,9 +291,9 @@ public class CustomerRestController implements ICustomerRestController {
 		return response;
 	}
 
-	@PostMapping(EcommConstants.CUSTOMER_CONTROLLER_DELETE_CUSTOMER)
+	@GetMapping(EcommConstants.CUSTOMER_CONTROLLER_DELETE_CUSTOMER)
 	@Override
-	public CustomerDTO deleteCustomer(CustomerDTO customerDTO) throws EcommException {
+	public CustomerDTO deleteCustomer(@PathVariable("id") Long idCustomer) throws EcommException {
 		CustomerDTO response = new CustomerDTO();
 		try {
 

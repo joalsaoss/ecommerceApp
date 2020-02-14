@@ -24,15 +24,6 @@ public class EcommConstants {
 	public static final int JWT_EXPIRACION_MS_SESSION = 180000000;
 
 	/**
-	 * Web services
-	 */
-	public static final String SERVICIO_WEB = "http://localhost:8080/appgateway";
-	public static final String HEADER_CONTENT_TYPE = "Content-Type";
-	public static final String HEADER_APP_JSON = "application/json";
-	public static final String HEADER_ACCEPT = "Accept";
-	public static final String URL = "http://192.168.1.170:8080/seguridadApi";
-
-	/**
 	 * Log severity
 	 */
 	public static final String SEVERIDAD_DEBUG = "debug";
@@ -98,6 +89,38 @@ public class EcommConstants {
 	/**
 	 * Controllers constants
 	 */
+	
+	/**
+	 * Web services
+	 */
+	public static final String WEB_SERVICE_PRODUCTS = "http://localhost:8787";
+	public static final String WEB_SERVICE_CUSTOMER = "http://localhost:8788";
+	public static final String WEB_SERVICE_BUY = "http://localhost:8789";
+	public static final String WEB_SERVICE_GATEWAY = "http://localhost:8789";
+	public static final String HEADER_CONTENT_TYPE = "Content-Type";
+	public static final String HEADER_APP_JSON = "application/json";
+	public static final String HEADER_ACCEPT = "Accept";
+	public static final String URL = "http://192.168.1.170:8080/seguridadApi";
+	
+	public static final String WEB_SERVICE_GATEWAY_CREATE_CART = "/apigateway/create_cart";
+	public static final String WEB_SERVICE_GATEWAY_CREATE_PRODUCT = "apigateway/create_product";
+	public static final String WEB_SERVICE_GATEWAY_CREATE_CATEGORY = "apigateway/create_category";
+	public static final String WEB_SERVICE_GATEWAY_GETALL_CART = "/apigateway/getall_cart";
+	public static final String WEB_SERVICE_GATEWAY_GETALL_PRODUCT = "/apigateway/getall_product";
+	public static final String WEB_SERVICE_GATEWAY_GETPRODUCT_BY_CATEGORY = "/apigateway/get_product_by_category";
+	
+	
+	
+	public static final String WEB_SERVICE_CUTOMER_GETBYID_CUSTOMER = "/customer/getbyid/";
+	public static final String WEB_SERVICE_GATEWAY_GETBYID_PRODUCT = "/product/getbyid/";
+	public static final String WEB_SERVICE_GATEWAY_GETBYID_SHOPPINGCART = "/shoppingcart/getbyid/";
+	public static final String WEB_SERVICE_GATEWAY_GETBYID_WISHLIST = "/wishlist/getbyid/";
+	
+	
+	public static final char TYPE_SERVER_BUY = 'B';
+	public static final char TYPE_SERVER_CUSTOMER = 'C';
+	public static final char TYPE_SERVER_PRODUCT = 'P';
+	
 	public static final String WEB_CONTROLLER_GET_HOME = "/home";
 	public static final String WEB_CONTROLLER_REQUEST_INDEX = "/";
 
@@ -119,7 +142,7 @@ public class EcommConstants {
 	public static final String PRODUCT_CONTROLLER_CREATE_PHOTOPRODUCT = "/photoproduct/create";
 	public static final String PRODUCT_CONTROLLER_UPDATE_PHOTOPRODUCT = "/photoproduct/update";
 	public static final String PRODUCT_CONTROLLER_GETALL_PHOTOPRODUCT = "/photoproduct/getall";
-	public static final String PRODUCT_CONTROLLER_DELETE_PHOTOPRODUCT = "/photoproduct/delete/{id}";
+	public static final String PRODUCT_CONTROLLER_DELETE_PHOTOPRODUCT = "/photoproduct/deleted/{id}";
 	public static final String PRODUCT_CONTROLLER_GETBYID_PHOTOPRODUCT = "/photoproduct/getbyid/{id}";
 
 	// Customer
