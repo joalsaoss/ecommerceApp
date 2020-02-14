@@ -50,7 +50,7 @@ public class ProductRestController implements IProductRestController {
 		GenericDTO response = new GenericDTO();
 		try {
 			response = productRead.getAllProducts();
-			ecommLogger.messageLogger(EcommMessages.getMessage(EcommConstants.MESSAGE_GENERIC_EXCEPCION, ""),
+			ecommLogger.messageLogger(EcommMessages.getMessage(EcommConstants.MESSAGE_GETALL_PRODUCTS_OK, ""),
 					EcommConstants.SEVERIDAD_INFO, ProductRestController.class);
 		} catch (EcommException e) {
 			response.setCoderesponse(EcommConstants.EXTERNAL_ERROR_RESPONSE);

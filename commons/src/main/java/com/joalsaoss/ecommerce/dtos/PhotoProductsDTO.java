@@ -10,7 +10,7 @@ import lombok.Data;
  *
  */
 @Data
-public class PhotoProductsDTO {
+public class PhotoProductsDTO extends ResponseDTO {
 	Long idPhotoProduct;
 	String photoName;
 	String photoPath;

@@ -143,21 +143,53 @@ public class EcommConstants {
 	/**
 	 * Normal messages
 	 */
-	public static final String MENSAJE_EXITO_CORREO = "mensaje_exito_correo";
-	public static final String MENSAJE_INICIO_SESION_CORRECTO = "mensaje_inicio_sesion_correcto";
-	public static final String MENSAJE_CAMBIAR_CLAVE_CORRECTO = "mensaje_cambiar_clave_correcto";
-	public static final String MENSAJE_CAMBIAR_CLAVE_INCORRECTO = "mensaje_cambiar_clave_incorrecto";
-	public static final String MENSAJE_RESTABLACER_CLAVE_CORRECTO = "mensaje_restablecer_clave_correcto";
-	public static final String MENSAJE_CORREO_ENVIADO_CORRECTO = "mensaje_correo_enviado_correcto";
-	public static final String MENSAJE_CREAR_COMPONENTE_GASTO_CORRECTO = "mensaje_crear_componente_gasto_correcto";
-	public static final String MENSAJE_CAMBIAR_ESTADO_COMPONENTE_GASTO_CORRECTO = "mensaje_cambiar_estado_componente_gasto_correcto";
-	public static final String MENSAJE_MODIFICAR_COMPONENTE_GASTO_CORRECTO = "mensaje_modificar_componente_gasto_correcto";
-	public static final String MENSAJE_OBTENER_COMPONENTE_GASTO_TODOS_CORRECTO = "mensaje_obtener_componente_gasto_todos_correcto";
-	
+	public static final String MESSAGE_SUCCESS_CATEGORY_CREATE = "message_success_category_create";
+	public static final String MESSAGE_SUCCESS_CATEGORY_UPDATE = "message_success_category_update";
+	public static final String MESSAGE_SUCCESS_PRODUCT_CREATE = "message_success_product_create";
+	public static final String MESSAGE_SUCCESS_PRODUCT_UPDATE = "message_success_product_update";
+	public static final String MESSAGE_SUCCESS_SHOPPINGCART_CREATE = "message_success_shoppingcart_create";
+	public static final String MESSAGE_SUCCESS_SHOPPINGCART_UPDATE = "message_success_shoppingcart_update";
+	public static final String MESSAGE_SUCCESS_WISHLIST_CREATE = "message_success_wishlist_create";
+	public static final String MESSAGE_SUCCESS_WISHLIST_UPDATE = "message_success_wishlist_update";
+	public static final String MESSAGE_SUCCESS_CUSTOMER_CREATE = "message_success_customer_create";
+	public static final String MESSAGE_SUCCESS_CUSTOMER_UPDATE = "message_success_customer_update";
+	public static final String MESSAGE_SUCCESS_ADDRESS_CREATE = "message_success_address_create";
+	public static final String MESSAGE_SUCCESS_ADDRESS_UPDATE = "message_success_address_update";
+	public static final String MESSAGE_SUCCESS_CITY_CREATE = "message_success_city_create";
+	public static final String MESSAGE_SUCCESS_CITY_UPDATE = "message_success_city_update";
 	
 	public static final String MESSAGE_GETALL_PRODUCTS_OK = "message_getall_products_ok";
 	public static final String MESSAGE_GETALL_PRODUCTS_NOT_FOUND = "message_getall_products_not_found";
+	public static final String MESSAGE_GETALL_CATEGORY_OK = "message_getall_category_ok";
+	public static final String MESSAGE_GETALL_CATEGORY_NOT_FOUND = "message_getall_category_not_found";
+	public static final String MESSAGE_GETALL_SHOPPINGCART_OK = "message_getall_shoppingcart_ok";
+	public static final String MESSAGE_GETALL_SHOPPINGCART_NOT_FOUND = "message_getall_shoppingcart_not_found";
+	public static final String MESSAGE_GETALL_WISHLIST_OK = "message_getall_wishlist_ok";
+	public static final String MESSAGE_GETALL_WISHLIST_NOT_FOUND = "message_getall_wishlist_not_found";
+	public static final String MESSAGE_GETALL_CUSTOMER_OK = "message_getall_customer_ok";
+	public static final String MESSAGE_GETALL_CUSTOMER_NOT_FOUND = "message_getall_customer_not_found";
+	public static final String MESSAGE_GETALL_ADDRESS_OK = "message_getall_address_ok";
+	public static final String MESSAGE_GETALL_ADDRESS_NOT_FOUND = "message_getall_address_not_found";
+	public static final String MESSAGE_GETALL_CITY_OK = "message_getall_city_ok";
+	public static final String MESSAGE_GETALL_CITY_NOT_FOUND = "message_getall_city_not_found";
+	public static final String MESSAGE_GETALL_PHOTOPRODUCT_OK = "message_getall_photoproduct_ok";
+	public static final String MESSAGE_GETALL_PHOTOPRODUCT_NOT_FOUND = "message_getall_photoproduct_not_found";
 	
+	public static final String MESSAGE_ERROR_ADDRESS_CREATE = "message_error_address_create";
+	public static final String MESSAGE_ERROR_ADDRESS_UPDATE = "message_error_address_update";
+	public static final String MESSAGE_ERROR_CATEGORY_CREATE = "message_error_category_create";
+	public static final String MESSAGE_ERROR_CATEGORY_UPDATE = "message_error_category_update";
+	public static final String MESSAGE_ERROR_CITY_CREATE = "message_error_city_create";
+	public static final String MESSAGE_ERROR_CITY_UPDATE = "message_error_city_update";
+	public static final String MESSAGE_ERROR_CUSTOMER_CREATE = "message_error_customer_create";
+	public static final String MESSAGE_ERROR_CUSTOMER_UPDATE = "message_error_customer_update";
+	public static final String MESSAGE_ERROR_PRODUCT_CREATE = "message_error_product_create";
+	public static final String MESSAGE_ERROR_PRODUCT_UPDATE = "message_error_product_update";
+	public static final String MESSAGE_ERROR_SHOPPINGCART_CREATE = "message_error_shoppingcart_create";
+	public static final String MESSAGE_ERROR_SHOPPINGCART_UPDATE = "message_error_shoppingcart_update";
+	public static final String MESSAGE_ERROR_WISHLIST_CREATE = "message_error_wishlist_create";
+	public static final String MESSAGE_ERROR_WISHLIST_UPDATE = "message_error_wishlist_update";
+
 	/**
 	 * Error messages
 	 */
@@ -204,5 +236,5 @@ public class EcommConstants {
 	/*
 	 * Mensajes expcepciones
 	 */
-	public static final String MESSAGE_GENERIC_EXCEPCION = "mensaje_excepcion_generica";
+	public static final String MESSAGE_GENERIC_EXCEPCION = "message_excepcion_generica";
 }
