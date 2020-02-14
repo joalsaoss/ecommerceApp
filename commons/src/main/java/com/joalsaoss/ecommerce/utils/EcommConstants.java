@@ -102,35 +102,63 @@ public class EcommConstants {
 	public static final String WEB_CONTROLLER_REQUEST_INDEX = "/";
 
 	// Category
-	public static final String CATEGORY_CONTROLLER_CREATE_CATEGORY = "/category/create";
-	public static final String CATEGORY_CONTROLLER_UPDATE_CATEGORY = "/category/update";
-	public static final String CATEGORY_CONTROLLER_GETALL_CATEGORY = "/category/getall";
-	public static final String CATEGORY_CONTROLLER_GETBYID_CATEGORY = "/category/getbyid/{id}";
-
-	// Customer
-	public static final String CUSTOMER_CONTROLLER_CREATE_CUSTOMER = "/customer/create";
-	public static final String CUSTOMER_CONTROLLER_UPDATE_CUSTOMER = "/customer/update";
-	public static final String CUSTOMER_CONTROLLER_GETALL_CUSTOMER = "/customer/getall";
-	public static final String CUSTOMER_CONTROLLER_GETBYID_CUSTOMER = "/customer/getbyid/{id}";
+	public static final String PRODUCT_CONTROLLER_CREATE_CATEGORY = "/category/create";
+	public static final String PRODUCT_CONTROLLER_UPDATE_CATEGORY = "/category/update";
+	public static final String PRODUCT_CONTROLLER_GETALL_CATEGORY = "/category/getall";
+	public static final String PRODUCT_CONTROLLER_DELETE_CATEGORY = "/category/delete/{id}";
+	public static final String PRODUCT_CONTROLLER_GETBYID_CATEGORY = "/category/getbyid/{id}";
 
 	// Products
 	public static final String PRODUCT_CONTROLLER_CREATE_PRODUCT = "/product/create";
 	public static final String PRODUCT_CONTROLLER_UPDATE_PRODUCT = "/product/update";
 	public static final String PRODUCT_CONTROLLER_GETALL_PRODUCT = "/product/getall";
+	public static final String PRODUCT_CONTROLLER_DELETE_PRODUCT = "/product/delete/{id}";
 	public static final String PRODUCT_CONTROLLER_GETBYID_PRODUCT = "/product/getbyid/{id}";
 
-	/**
-	 * Fields length
-	 */
-	public static final int BUZON_USUARIO_ORIGINA_MIN_LENGTH = 1;
-	public static final int BUZON_USUARIO_ORIGINA_MAX_LENGTH = 100;
-	public static final int BUZON_USUARIO_DESTINO_MIN_LENGTH = 1;
-	public static final int BUZON_USUARIO_DESTINO_MAX_LENGTH = 100;
-	public static final int BUZON_USUARIO_MENSAJE_MIN_LENGTH = 1;
-	public static final int BUZON_USUARIO_MENSAJE_MAX_LENGTH = 10000;
+	// PhotoProducts
+	public static final String PRODUCT_CONTROLLER_CREATE_PHOTOPRODUCT = "/photoproduct/create";
+	public static final String PRODUCT_CONTROLLER_UPDATE_PHOTOPRODUCT = "/photoproduct/update";
+	public static final String PRODUCT_CONTROLLER_GETALL_PHOTOPRODUCT = "/photoproduct/getall";
+	public static final String PRODUCT_CONTROLLER_DELETE_PHOTOPRODUCT = "/photoproduct/delete/{id}";
+	public static final String PRODUCT_CONTROLLER_GETBYID_PHOTOPRODUCT = "/photoproduct/getbyid/{id}";
+
+	// Customer
+	public static final String CUSTOMER_CONTROLLER_CREATE_CUSTOMER = "/customer/create";
+	public static final String CUSTOMER_CONTROLLER_UPDATE_CUSTOMER = "/customer/update";
+	public static final String CUSTOMER_CONTROLLER_GETALL_CUSTOMER = "/customer/getall";
+	public static final String CUSTOMER_CONTROLLER_DELETE_CUSTOMER = "/customer/delete/{id}";
+	public static final String CUSTOMER_CONTROLLER_GETBYID_CUSTOMER = "/customer/getbyid/{id}";
+
+	// CITIES
+	public static final String CUSTOMER_CONTROLLER_CREATE_CITY = "/city/create";
+	public static final String CUSTOMER_CONTROLLER_UPDATE_CITY = "/city/update";
+	public static final String CUSTOMER_CONTROLLER_GETALL_CITY = "/city/getall";
+	public static final String CUSTOMER_CONTROLLER_DELETE_CITY = "/city/delete/{id}";
+	public static final String CUSTOMER_CONTROLLER_GETBYID_CITY = "/city/getbyid/{id}";
+
+	// ADDRESSES
+	public static final String CUSTOMER_CONTROLLER_CREATE_ADDRESS = "/address/create";
+	public static final String CUSTOMER_CONTROLLER_UPDATE_ADDRESS = "/address/update";
+	public static final String CUSTOMER_CONTROLLER_GETALL_ADDRESS = "/address/getall";
+	public static final String CUSTOMER_CONTROLLER_DELETE_ADDRESS = "/address/delete/{id}";
+	public static final String CUSTOMER_CONTROLLER_GETBYID_ADDRESS = "/address/getbyid/{id}";
+
+	// SHOPPINGCART
+	public static final String BUY_CONTROLLER_CREATE_SHOPPINGCART = "/shoppingcart/create";
+	public static final String BUY_CONTROLLER_UPDATE_SHOPPINGCART = "/shoppingcart/update";
+	public static final String BUY_CONTROLLER_GETALL_SHOPPINGCART = "/shoppingcart/getall";
+	public static final String BUY_CONTROLLER_DELETE_SHOPPINGCART = "/shoppingcart/delete/{id}";
+	public static final String BUY_CONTROLLER_GETBYID_SHOPPINGCART = "/shoppingcart/getbyid/{id}";
+
+	// WISHLIST
+	public static final String BUY_CONTROLLER_CREATE_WISHLIST = "/wishlist/create";
+	public static final String BUY_CONTROLLER_UPDATE_WISHLIST = "/wishlist/update";
+	public static final String BUY_CONTROLLER_GETALL_WISHLIST = "/wishlist/getall";
+	public static final String BUY_CONTROLLER_DELETE_WISHLIST = "/wishlist/delete/{id}";
+	public static final String BUY_CONTROLLER_GETBYID_WISHLIST = "/wishlist/getbyid/{id}";
 
 	/**
-	 * Formatos
+	 * Formatts
 	 */
 	public static final String FORMAT_DATETIME_SHORT_WITH_DASH = "yyyy-MM-dd HH:mm:ss";
 	public static final String FORMAT_DATE_SHORT_WITH_DASH = "yyyy-MM-dd";
@@ -157,7 +185,7 @@ public class EcommConstants {
 	public static final String MESSAGE_SUCCESS_ADDRESS_UPDATE = "message_success_address_update";
 	public static final String MESSAGE_SUCCESS_CITY_CREATE = "message_success_city_create";
 	public static final String MESSAGE_SUCCESS_CITY_UPDATE = "message_success_city_update";
-	
+
 	public static final String MESSAGE_GETALL_PRODUCTS_OK = "message_getall_products_ok";
 	public static final String MESSAGE_GETALL_PRODUCTS_NOT_FOUND = "message_getall_products_not_found";
 	public static final String MESSAGE_GETALL_CATEGORY_OK = "message_getall_category_ok";
@@ -174,7 +202,7 @@ public class EcommConstants {
 	public static final String MESSAGE_GETALL_CITY_NOT_FOUND = "message_getall_city_not_found";
 	public static final String MESSAGE_GETALL_PHOTOPRODUCT_OK = "message_getall_photoproduct_ok";
 	public static final String MESSAGE_GETALL_PHOTOPRODUCT_NOT_FOUND = "message_getall_photoproduct_not_found";
-	
+
 	public static final String MESSAGE_ERROR_ADDRESS_CREATE = "message_error_address_create";
 	public static final String MESSAGE_ERROR_ADDRESS_UPDATE = "message_error_address_update";
 	public static final String MESSAGE_ERROR_CATEGORY_CREATE = "message_error_category_create";
@@ -196,7 +224,7 @@ public class EcommConstants {
 	public static final String MESSAGE_NOT_FOUND = "Mensaje no encontrado";
 	public static final String MENSAJE_ARCHIVO_PROCESADO_NO_ENCONTRADO = "mensaje_archivo_procesado_no_encontrado";
 	public static final String MENSAJE_BANCO_DE_PROYECTOS_NO_ENCONTRADO = "mensaje_banco_de_proyectos_no_encontrado";
-	
+
 	/**
 	 * Validation messages
 	 */
