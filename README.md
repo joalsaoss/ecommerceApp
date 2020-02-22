@@ -20,7 +20,7 @@ Modiifcar el archivo application.properties en los proyectos apicustomer, apipro
 * Los valores de username y password pueden ser los que normalmente se usan para concetarse a la base de datos.
 
 ## Configurar el proyecto apigateway
-Modiifcar el archivo application.properties en el proyectos apigateway de la siguiente manera:
+Modificar el archivo application.properties en el proyectos apigateway de la siguiente manera:
 * server.port=8790
 
 ### NOTA:
@@ -28,7 +28,7 @@ Este valor debe ser diferente al de los otros tres proyectos
 
 ## Arrancar el proyecto
 Para arrancar el proyecto se debe ejecutar primero los servicios apicustomer, apiproduct y appbuy. Esto se hace de la siguiente manera:
-Dar clic derecho sobre el proyecto y seleccionar Run > Spring Boot App. 
-Una vez han iniciado los tres proyectos se procede a ejecutar el proyecto apigateway de la misma manera. Clic derecho > Run > Spring Boot App
+* Dar clic derecho sobre el proyecto y seleccionar Run > Spring Boot App. 
+* Una vez han iniciado los tres proyectos se procede a ejecutar el proyecto apigateway de la misma manera. Clic derecho > Run > Spring Boot App
 
 
