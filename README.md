@@ -10,9 +10,13 @@ App for ecommerce (TEST)
 Modiifcar el archivo application.properties en los proyectos apicustomer, apiproduct y appbuy de la siguiente manera:
 
 spring.jpa.hibernate.ddl-auto=update
+
 spring.datasource.url=jdbc:mysql://localhost:3306/ecommerce_db?useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC
+
 spring.datasource.username=root
+
 spring.datasource.password=Pass@word1
+
 server.port=8788
 
 ### NOTA: 
@@ -21,6 +25,7 @@ server.port=8788
 
 ## Configurar el proyecto apigateway
 Modiifcar el archivo application.properties en el proyectos apigateway de la siguiente manera:
+
 server.port=8790
 
 ### NOTA:
